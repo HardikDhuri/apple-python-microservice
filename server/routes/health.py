@@ -8,11 +8,13 @@ def health():
     state = {"status": "UP"}
     return jsonify(state)
 
-@app.route("/answer")
-def answer():
-    """Answer route"""
-    state = {"Apple is red": 100}
-    return jsonify(state)
+@app.route('/answer/<number>')
+def CheckAnswerToLifeTheUniverseAndEverything(number):
+    content = {
+        'statement': 'The Answer to Life the Universe and Everything is ' + number + '.',
+        'check': 'The statement is ' + str(number == '42') + '!'
+    }
+    return jsonify(content)
 
 @app.route("/nothing")
 def nothing():
