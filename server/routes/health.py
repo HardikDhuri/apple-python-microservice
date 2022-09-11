@@ -14,3 +14,9 @@ def answer():
     state = {"Apple is red": 100}
     return jsonify(state)
 
+@app.route("/nothing")
+def nothing():
+    """nothing route"""
+    state = {"status":"Kuch ni milega yaha.... isliye nothing route h"}
+    return jsonify(state)
+
