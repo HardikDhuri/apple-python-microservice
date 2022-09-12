@@ -3,6 +3,7 @@ from flask import Flask, abort, session, request, redirect
 from flask.json import jsonify
 from flask_restx import Api
 
+#apple is red
 app = Flask(__name__, template_folder="../public/", static_folder="../public/", static_url_path='')
 api = Api(app, title='My first Python API', version='1.0', doc='/apidocs/', description='A number-crunching API')
 
