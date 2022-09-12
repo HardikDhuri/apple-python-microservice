@@ -1,4 +1,3 @@
-
 from flask import jsonify
 from server import app
 
@@ -12,7 +11,8 @@ def health():
 def CheckAnswerToLifeTheUniverseAndEverything(number):
     content = {
         'statement': 'The Answer to Life the Universe and Everything is ' + number + '.',
-        'check': 'The statement is ' + str(number == '42') + '!'
+        'check': 'The statement is ' + str(number == '42') + '!',
+        'updated': 'Yes'
     }
     return jsonify(content)
 
